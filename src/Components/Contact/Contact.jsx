@@ -65,7 +65,7 @@ const Contact = ({ isDarkMode }) => {
             Get In Touch
           </h2>
           <div className={`p-8 rounded-lg shadow-xl ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
-            <form name="contact" method="POST" action="/contact-successful" data-netlify="true" className="space-y-6">
+            <form name="contact" method="POST" action="/pages/contact-successful" data-netlify="true" className="space-y-6">
               
             <input type="hidden" name="form-name" value="contact" />
               <div>
