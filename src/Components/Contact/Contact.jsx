@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const Contact = ({ isDarkMode }) => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-    const [status, setStatus] = useState(''); // 'loading', 'success', 'error'
+    const [status, setStatus] = useState(''); 
+    const navigate = useNavigate(); 
   
     const handleChange = (e) => {
       const { name, value } = e.target;
@@ -57,6 +59,19 @@ const Contact = ({ isDarkMode }) => {
       
         ), url: 'mailto:henokzena650@gmail.com' },
     ];
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      const form = e.target;
+  
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString(),
+      })
+        .then(() => navigate("/contact-successful"))
+        .catch((error) => alert("Error: " + error));
+    };
   
     return (
       <section id="contact" className={`py-20 px-4 md:px-8 transition-colors duration-300 ${isDarkMode ? 'bg-gray-900 text-gray-50' : 'bg-gray-100 text-gray-800'}`}>
@@ -65,7 +80,7 @@ const Contact = ({ isDarkMode }) => {
             Get In Touch
           </h2>
           <div className={`p-8 rounded-lg shadow-xl ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
-            <form name="contact" method="POST" action="/pages/contact-successful" data-netlify="true" className="space-y-6">
+            <form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true" className="space-y-6">
               
             <input type="hidden" name="form-name" value="contact" />
               <div>
