@@ -9,6 +9,8 @@ import Skills from './Components/Skills/Skills';
 import Projects from './Components/Projects/Projects';
 import Contact from './Components/Contact/Contact';
 import Footer from './Components/Footer/Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import SuccessMessage from './Components/Contact/ContactSuccess';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false); // Default to light mode
@@ -31,7 +33,11 @@ function App() {
 
   return (
     <div className={`font-sans ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
-      
+      <BrowserRouter>
+
+      <Routes>
+        <Route path="/" element={
+          <>
       <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
       <Hero isDarkMode={isDarkMode} />
       <About isDarkMode={isDarkMode} />
@@ -39,6 +45,14 @@ function App() {
       <Projects isDarkMode={isDarkMode} />
       <Contact isDarkMode={isDarkMode} />
       <Footer isDarkMode={isDarkMode} />
+          </>
+        } />
+        <Route path="/projects" element={<Projects isDarkMode={isDarkMode} />} />
+        <Route path="/contact-successful" element={<SuccessMessage message="Your message has been sent successfully. I look forward to reviewing it and will be in touch soon." />} />
+      </Routes>
+      </BrowserRouter>
+      
+
     </div>
   );
 }

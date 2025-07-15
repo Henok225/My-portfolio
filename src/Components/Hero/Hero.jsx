@@ -45,12 +45,21 @@ const Hero = ({ isDarkMode }) => {
           <p className={`max-w-3xl mx-auto text-base md:text-lg mb-8 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
             I'm a passionate developer with expertise in creating dynamic and user-friendly web applications. I love building things that make a difference.
           </p>
-          <button
+          <div style={{display:'flex', gap:'10px', justifyContent:'center', flexWrap:'wrap'}}>
+            <button
             onClick={() => scrollToSection('projects')}
-            className="px-8 py-3 bg-orange-500 text-white text-lg font-semibold rounded-full shadow-lg hover:bg-orange-600 transform hover:scale-105 transition-all duration-300 ease-in-out"
+            className="px-8 py-3 bg-orange-500 text-white text-lg font-semibold rounded-full shadow-lg hover:bg-orange-600 transform hover:scale-105 transition-all duration-200 ease-in-out"
           >
             View My Work
           </button>
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="px-8 py-3 bg-blue-600 text-white text-lg font-semibold rounded-full shadow-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-200 ease-in-out"
+          >
+            Get in touch
+          </button>
+          </div>
+          
         </div>
       </section>
     );

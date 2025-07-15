@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { assets } from '../../assets/assets';
+import LoadingSpinner from '../loader/LoadingSpinner';
 
 const ProjectCard = ({ project, isDarkMode }) => {
 
@@ -7,12 +8,13 @@ const ProjectCard = ({ project, isDarkMode }) => {
   
 
     return (
-      <div className={`relative rounded-lg overflow-hidden shadow-xl transition-transform duration-300 hover:scale-105 group ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+      <div className={`relative rounded-lg overflow-hidden shadow-2xl transition-transform duration-300 hover:scale-105 group ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
         {/* Project Image */}
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-auto object-cover object-center"
+          style={{height:'300px', width:'100%'}}
+          className=" object-cover object-center"
           onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/600x400/cccccc/333333?text=Project+Image"; }}
         />
         {/* Overlay for details on hover */}
@@ -52,6 +54,7 @@ const ProjectCard = ({ project, isDarkMode }) => {
   const Projects = ({ isDarkMode }) => {
     const sectionRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
+    const [loading, setLoading] = useState(true);
   
     const [viewAllProject, setViewAllProject] = useState(false);
     useEffect(() => {
@@ -166,9 +169,18 @@ const ProjectCard = ({ project, isDarkMode }) => {
             ))}
 
             {/* View all projects */}
-            {viewAllProject ? projectsDataAll.map(project => (
+            {viewAllProject ? 
+            <>
+            {
+              projectsDataAll ?
+              projectsDataAll.map(project => (
               <ProjectCard key={project.id} project={project} isDarkMode={isDarkMode} />
-            )):null}
+            ))
+            :<LoadingSpinner />
+            }
+            </>
+            
+            :null}
           </div>
           <div className="text-center mt-12">
             <button
