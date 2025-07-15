@@ -65,7 +65,9 @@ const Contact = ({ isDarkMode }) => {
             Get In Touch
           </h2>
           <div className={`p-8 rounded-lg shadow-xl ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
-            <form name="contact" method="POST" netlify className="space-y-6">
+            <form name="contact" method="POST" data-netlify="true" className="space-y-6">
+              
+            <input type="hidden" name="form-name" value="contact" />
               <div>
                 <label htmlFor="name" className={`block text-sm font-medium mb-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                   Name
