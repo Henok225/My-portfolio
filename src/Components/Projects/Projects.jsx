@@ -95,17 +95,17 @@ const ProjectCard = ({ project, isDarkMode }) => {
         description: 'A responsive website for the Focal Physics Club at Addis Ababa University',
         image: assets.focal_image,
         tags: ['React', 'Node.js', 'Express.js', 'mongoDB', 'Firebase', 'Tailwind CSS'],
-        liveLink: 'https://focalclub.netlify.app',
-        githubLink: 'https://github.com/Henok225/FOCAL-club/blob/main',
+        liveLink: 'https://focalphysicsclub.netlify.app',
+        githubLink: 'https://github.com/Henok225/FOCAL-',
       },
       {
         id: 3,
         title: 'Spark Study',
         description: 'Spark Study is a modern educational platform designed to help students learn more effectively through structured lessons, interactive quizzes, and smart progress tracking.',
-        image: assets.commingsoon,
+        image: assets.sparkstudy,
         tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
-        liveLink: '#',
-        githubLink: 'https://github.com/Henok225/Spark-Study',
+        liveLink: 'https://sparkstudyhub.com',
+        githubLink: 'https://github.com/Henok225/SparkStudyHub',
       },
     ];
 
@@ -116,7 +116,7 @@ const ProjectCard = ({ project, isDarkMode }) => {
         description: 'A simple quiz app that allows users to take quizzes on various topics, with features like score tracking and question randomization.',
         image: assets.myquizapp,
         tags: ['HTML', 'JavaScript', 'CSS'],
-        liveLink: 'https://myquizzapp.netlify.app', 
+        liveLink: 'https://myquizzap.netlify.app', 
         githubLink: 'https://github.com/Henok225/myquizzapp',
       },
       {

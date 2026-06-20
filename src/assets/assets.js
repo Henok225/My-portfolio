@@ -7,6 +7,7 @@ import commingsoon from './Projects_cover_image/commingsoon.png'
 import age_calculator from './Projects_cover_image/age-calculator.png'
 import multistep_form from './Projects_cover_image/multistep_form.png'
 import tictactoe from './Projects_cover_image/tictac-game.png'
+import sparkstudy from './Projects_cover_image/sparkstudy.png'
 
 
 export const assets = {         
@@ -18,5 +19,6 @@ export const assets = {
     commingsoon,
     age_calculator,
     multistep_form,
-    tictactoe
+    tictactoe,
+    sparkstudy
 }
