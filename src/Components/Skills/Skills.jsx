@@ -72,9 +72,11 @@ const SkillIcon = ({ icon, name, isDarkMode }) => (
                 <h3 className={`text-2xl font-semibold mb-6 text-center ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
                   {category}
                 </h3>
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
+                <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
                   {skills.map((skill) => (
-                    <SkillIcon key={skill.name} icon={skill.icon} name={skill.name} isDarkMode={isDarkMode} />
+                    <div key={skill.name} className="w-24 sm:w-28 lg:w-32">
+                      <SkillIcon icon={skill.icon} name={skill.name} isDarkMode={isDarkMode} />
+                    </div>
                   ))}
                 </div>
               </div>
