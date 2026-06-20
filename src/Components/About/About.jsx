@@ -45,7 +45,7 @@ const About = ({ isDarkMode }) => {
             </div>
             <div className="md:w-2/3 text-lg space-y-6">
             <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-  Hi, I’m Henok — a physics student and passionate fullstack developer. I started coding in high school and have since built several real-world web apps using the MERN stack.
+  Hi, I’m Henok — a physics student and creative fullstack developer. I started coding in high school and have since built several real-world web apps using the MERN stack.
 </p>
 <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
   I enjoy solving problems, learning new technologies, and building clean, user-friendly interfaces that work smoothly. I believe in writing maintainable code and growing through real projects.
