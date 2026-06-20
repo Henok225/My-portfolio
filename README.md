@@ -15,7 +15,7 @@ This is my personal portfolio website showcasing my projects, skills, and experi
 - Netlify/Vercel for deployment
 
 ## 📌 Live Demo
-👉 [https://your-portfolio.netlify.app](https://your-portfolio.netlify.app)
+👉 [https://your-portfolio.netlify.app](https://henoks-portfolio.netlify.app)
 
 ## 📧 Contact
 - Email: henokzena650@gmail.com
