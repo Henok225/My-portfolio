@@ -38,6 +38,7 @@ const SkillIcon = ({ icon, name, isDarkMode }) => (
     const skillsData = {
       Frontend: [
         { name: 'React', icon: '⚛️' },
+        { name: 'Next.js', icon: '🇳' },
         { name: 'JavaScript', icon: 'JS' },
         { name: 'HTML5', icon: '🌐' },
         { name: 'CSS3', icon: '🎨' },
